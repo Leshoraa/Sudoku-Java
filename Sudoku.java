@@ -1,7 +1,7 @@
 import java.util.Random;
 import java.util.Scanner;
 
-public class SudokuGenerator {
+public class Sudoku {
     public static void main(String[] args) {
         int[][] board = new int[9][9]; // Initialize the Sudoku board
         int[][] solution = new int[9][9]; // Initialize the solution board
