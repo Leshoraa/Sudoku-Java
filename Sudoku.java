@@ -164,10 +164,26 @@ public class Sudoku {
                     System.out.println("\nWrong number. Try again.\n");
                 }
                 printBoard(board); // Print the board after each input
+                if (isBoardComplete(board)) {
+                    System.out.println("Congratulations! You have completed the Sudoku.");
+                    break;
+                }
             } else {
                 System.out.println("Invalid input. Format should be (ex: A1 5).");
             }
         }
+    }
+    
+    // Check if the board is completely filled
+    private static boolean isBoardComplete(int[][] board) {
+        for (int row = 0; row < 9; row++) {
+            for (int col = 0; col < 9; col++) {
+                if (board[row][col] == 0) {
+                    return false;
+                }
+            }
+        }
+        return true;
     }
 
     // Copy the board to another board
